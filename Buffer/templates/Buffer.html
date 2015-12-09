@@ -1,0 +1,42 @@
+<div>
+	<div>
+        <label>Buffer Shape:</label>
+        <br>
+        <select data-dojo-attach-point="selectBufferShape" data-dojo-type="dijit/form/Select" id="bufferShape" data-dojo-attach-event="onChange:onBufferShapeChange">
+            <option value="FREEHAND_POLYGON" selected>FREEHAND_POLYGON</option>
+            <option value="POLYGON">POLYGON</option>
+            <option value="RECTANGLE">RECTANGLE</option>
+            <option value="TRIANGLE">TRIANGLE</option>
+            <option value="CIRCLE">CIRCLE</option>
+            <option value="ELLIPSE">ELLIPSE</option>
+            <option value="LINE">LINE</option>
+            <option value="POLYLINE">POLYLINE</option>
+            <option value="FREEHAND_POLYLINE">FREEHAND_POLYLINE</option>
+            <option value="POINT">POINT</option>
+
+        </select> 
+        <br>
+    </div>
+    <div>
+        <label>Buffer Distance:</label>
+        <br>
+        <input type="text" name="bufferDistance" id="bufferDistance" value="10">&nbsp;<span id="errmsg"></span>
+        <br>
+    </div>
+    <div>
+	    <select id="unit" style="width:100px;">
+	      <option value="UNIT_STATUTE_MILE">Miles</option>
+	      <option value="UNIT_FOOT">Feet</option>
+	      <option value="UNIT_KILOMETER">Kilometers</option>
+	      <option value="UNIT_METER">Meters</option>
+	      <option value="UNIT_NAUTICAL_MILE">Nautical Miles</option>
+	      <option value="UNIT_US_NAUTICAL_MILE">US Nautical Miles</option>
+	      <option value="UNIT_DEGREE">Degrees</option>
+	    </select><br />
+    </div>
+	<button data-dojo-type="dijit/form/Button" data-dojo-props="iconClass:'fa fa-square-o fa-fw',showLabel:true,disabled:false" data-dojo-attach-point="btnDrawBuffer" data-dojo-attach-event="click:onDrawBuffer">Draw Buffer</button>
+	<button data-dojo-type="dijit/form/Button" data-dojo-props="iconClass:'fa fa-eraser fa-fw',showLabel:true,disabled:false" data-dojo-attach-point="btnClear" data-dojo-attach-event="click:onClear">Clear</button>
+	<button data-dojo-type="dijit/form/Button" data-dojo-props="iconClass:'fa fa-align-center fa-fw',showLabel:true,disabled:false" data-dojo-attach-point="btnCenterTheMap" data-dojo-attach-event="click:onCenterTheMap">Center The Map</button>
+
+	<textarea name="bufferExtent" id="bufferExtent" cols="38" rows="10"></textarea>
+</div>
